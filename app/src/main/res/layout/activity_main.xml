@@ -54,12 +54,21 @@
         android:id="@+id/tv_second"
         android:layout_toRightOf="@+id/tv_separator2"/>
 
+    <TextView
+        android:id="@+id/tv_diff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="tes"
+        android:layout_below="@+id/tv_hour"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="S T A R T"
         android:id="@+id/btn_start"
-        android:layout_below="@+id/tv_hour"
+        android:layout_below="@+id/tv_diff"
         android:layout_alignLeft="@+id/tv_hour"
         android:layout_alignStart="@+id/tv_hour"
         android:layout_marginTop="92dp"

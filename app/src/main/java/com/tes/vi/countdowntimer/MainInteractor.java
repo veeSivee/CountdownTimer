@@ -16,4 +16,6 @@ public interface MainInteractor {
     String getMinuteIntr();
 
     String getSecondIntr();
+
+    String getDiff();
 }

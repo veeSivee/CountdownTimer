@@ -43,6 +43,7 @@ public class MainPresenterImpl implements MainPresenter, MainProcessingListener{
         mMainView.updateTime(mMainInteractor.getHourIntr(),
                 mMainInteractor.getMinuteIntr(),
                 mMainInteractor.getSecondIntr());
+        mMainView.showDiff(mMainInteractor.getDiff());
     }
 
     @Override

@@ -13,5 +13,7 @@ public interface MainView {
 
     void updateTime(String h, String m, String s);
 
+    void showDiff(String diff);
+
     void showButton();
 }

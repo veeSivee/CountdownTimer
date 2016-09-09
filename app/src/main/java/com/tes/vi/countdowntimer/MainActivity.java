@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements MainView  {
 
-    TextView tv_hour,tv_minute,tv_second;
+    TextView mTxtHour, mTxtMinute, mTxtSecond, mTxtDiff;
     Button btn_start;
 
     private static MainPresenter mMainPresenter;
@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity implements MainView  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_hour = (TextView)findViewById(R.id.tv_hour);
-        tv_minute = (TextView)findViewById(R.id.tv_minute);
-        tv_second = (TextView)findViewById(R.id.tv_second);
+        mTxtHour = (TextView)findViewById(R.id.tv_hour);
+        mTxtMinute = (TextView)findViewById(R.id.tv_minute);
+        mTxtSecond = (TextView)findViewById(R.id.tv_second);
+        mTxtDiff = (TextView)findViewById(R.id.tv_diff);
         btn_start = (Button)findViewById(R.id.btn_start);
         btn_start.setEnabled(false);
 
@@ -48,9 +49,14 @@ public class MainActivity extends AppCompatActivity implements MainView  {
 
     @Override
     public void updateTime(String h, String m, String s) {
-        tv_hour.setText(h);
-        tv_minute.setText(m);
-        tv_second.setText(s);
+        mTxtHour.setText(h);
+        mTxtMinute.setText(m);
+        mTxtSecond.setText(s);
+    }
+
+    @Override
+    public void showDiff(String diff) {
+        mTxtDiff.setText(diff);
     }
 
     @Override
